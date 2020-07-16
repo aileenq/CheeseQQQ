@@ -8,7 +8,7 @@ from datetime import datetime
 
 
 search_dates = ['2020-09-02','2020-09-05','2020-09-09','2020-09-12','2020-09-16','2020-09-19','2020-09-23','2020-09-26'] #你想要搜索的日期
-base_url = 'https://www.google.com/flights?lite=0#flt=SFO.PVG.2020-11-25.SFOPVG0UA857;c:USD;e:1;a:UA;sd:1;t:b;tt:o;sp:2.USD.706410' #这个url可以替换成任何你想搜的航班
+base_url = 'https://www.google.com/flights?lite=0#flt=SFO.PVG.2020-11-25.SFOPVG0UA857;c:USD;e:1;a:UA;sd:1;t:b;tt:o;sp:2.USD.706410' #这里可以替换成任何你想搜的航班的google flight URL
 
 
 time_out_seconds = 3 # set the time to wait till web fully loaded
