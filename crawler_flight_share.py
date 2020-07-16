@@ -12,11 +12,11 @@ base_url = 'https://www.google.com/flights?lite=0#flt=SFO.PVG.2020-11-25.SFOPVG0
 
 
 time_out_seconds = 3 # set the time to wait till web fully loaded
-executable_path = '-----你的chromedriver存放路径-----'
+executable_path = '-----你的chromedriver存放路径-----' #例如 ‘/Users/zhangsan/Downloads/chromedriver’
 
 option = webdriver.ChromeOptions()
-option.add_argument('headless') #让新开的Chrome在后台运行
-driver = webdriver.Chrome('-----你的chromedriver存放路径-----', chrome_options=option)
+option.add_argument('headless')
+driver = webdriver.Chrome('-----你的chromedriver存放路径-----', chrome_options=option) #例如 ‘/Users/zhangsan/Downloads/chromedriver’
 driver.get(base_url)
 
 found = False
@@ -32,17 +32,17 @@ for i in range(0,250): #刷250轮
 		try:
 			driver.find_element_by_class_name('gws-flights-results__error-message')
 			print(datetime.now())
-			print('UA857 SFO-PVG: no result on date: ' + my_date )
+			print('UA857 SFO-PVG: no result on date: ' + my_date ) #设定没有搜到航班时的提示信息
 			driver.quit()
 			time.sleep(3)
 			continue
 		except:
-			playsound('-----你的提示音文件路径-----') #播放提示音
+			playsound('-----你的提示音文件路径-----') #播放提示音 文件路径例如‘/Users/zhangsan/Downloads/alert.mp3’
 			print('❥△❥ flight search attempted on date ' +  my_date + ' flight found!❥△❥')
 			print('  url:', my_url)
 			found = True
 			break
 	
 print("End of 250 rounds.")
-playsound('-----你的提示音文件路径-----')
+playsound('-----你的结束提示音文件路径-----') #播放结束提示音 文件路径例如‘/Users/zhangsan/Downloads/end.mp3’
 driver.quit()  
