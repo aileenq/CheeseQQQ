@@ -11,7 +11,7 @@
 将FlightCrawler.zip下载到本地并解压缩，
 自己去下载一个Sublime Text，用来打开crawler_flight_share.py这个文件，
 按照代码中的注释按自己需要做调整，
-command+C保存好，
+command+S保存好，
 command+B跑起来~
 
 高手们请随便看看就好
